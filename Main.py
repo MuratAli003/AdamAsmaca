@@ -63,23 +63,27 @@ while not OyunBittiMi():
 
             cevap += " _ "
 
-#Yanlis harf girilmesi durumunda kontrol false donecektir.Bu durumda kalan_hak 1 azaltilmalidir
-    if  not kalan_hak_kontrol:
+    # Yanlis harf girilmesi durumunda kontrol false donecektir.Bu durumda kalan_hak 1 azaltilmalidir
+    if not kalan_hak_kontrol:
 
-        if kalan_hak != 0:
+        if kalan_hak != 1:
 
             kalan_hak -= 1
 
+
         else:
 
+            print(adam_asmaca[kalan_hak-1])
             print("__________  Oyunu Kaybettiniz  _______")
+            break
+
 
     print(adam_asmaca[kalan_hak])
     print(cevap)
     print(f"Kalan Hak: {kalan_hak}")
 
 #Dongu bittiginde kalan_hak 0 degilse oyun kazanilmistir
-if kalan_hak != 0:
+if kalan_hak != 1:
 
     print("________ TEBRİKLER KAZANDINIZ ________")
 
